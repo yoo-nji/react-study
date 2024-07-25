@@ -1,7 +1,11 @@
+import TodoListItem from "./TodoListItem";
+
 const TodoList = () => {
   return (
     <>
-      <h1>TodoList Component</h1>
+      <ul className="flex flex-col gap-4 mt-4 max-h-[284px] overflow-scroll">
+        <TodoListItem />
+      </ul>
     </>
   );
 };

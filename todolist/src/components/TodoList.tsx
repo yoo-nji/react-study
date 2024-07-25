@@ -1,10 +1,25 @@
+import { TTodo } from "./Todo";
 import TodoListItem from "./TodoListItem";
 
-const TodoList = () => {
+const TodoList = ({
+  todos,
+  toggleTodo,
+  deleteTodo,
+}: {
+  todos: TTodo[];
+  toggleTodo: (id: number) => void;
+  deleteTodo: (id: number) => void;
+}) => {
   return (
     <>
       <ul className="flex flex-col gap-4 mt-4 max-h-[284px] overflow-scroll">
-        <TodoListItem />
+        {todos.map((todo) => (
+          <TodoListItem
+            todo={todo}
+            toggleTodo={toggleTodo}
+            deleteTodo={deleteTodo}
+          />
+        ))}
       </ul>
     </>
   );

@@ -1,9 +1,11 @@
-import Todo from "./components/Todo";
+// import Todo from "./components/Todo";
+// import UseReducer from "./components/learn/UseReducer";
 
 const App = () => {
   return (
     <>
-      <Todo />
+      {/* <Todo /> */}
+      {/* <UseReducer /> */}
     </>
   );
 };
